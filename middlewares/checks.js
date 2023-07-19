@@ -19,6 +19,6 @@ const  checks = [
             .notEmpty().withMessage('el campo valorDeMercado es obligatorio')
             .isString().withMessage('el campo valorDeMercado tiene que ser de tipo string'),               
 
- ]
+ ];
 
  module.exports = checks;

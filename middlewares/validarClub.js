@@ -10,7 +10,7 @@ const clubes = ['CA RIVER PLATE', 'CA BOCA JUNIORS', 'CA VÉLEZ SARSFIELD', 'RAC
 const validarClub = async (req, res, next) =>{
     try {
         await Jugador.find({club: req.body.club});
-        if ({club: req.body.club == clubes}) {
+        if (clubes === clubes) {
             next();
         } else {
             res.status(400).json({

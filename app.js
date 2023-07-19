@@ -15,7 +15,7 @@ const {connect} = require('./db/db');
 
 
 
-//(http://localhost:3000) URL (/) URN
+//(http://localhost:8080) URL (/) URN
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 connect();

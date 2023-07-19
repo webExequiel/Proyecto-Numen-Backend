@@ -5,11 +5,11 @@ require('dotenv').config();
 const connect = async () => {
     try {
         await mongoose.connect(process.env.MONGO_CNN);
-        console.log('base de datos conectada')
+        console.log('Base de datos conectada')
         
     } catch {
-        console.log('no se pudo establecer una coneccion')
+        console.log('No se pudo establecer una coneccion')
     }
-}
+};
 
-module.exports = {connect}
+module.exports = {connect};

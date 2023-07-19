@@ -4,7 +4,7 @@ class ApiController {
     async list(req, res) {
         const personal = await Jugador.find();
         res.status(200).json(personal)
-    }
+    };
 
     async crear(req, res) {
         try {
@@ -14,30 +14,29 @@ class ApiController {
         } catch (error) {
             res.status(500).json(error)
         }
-    }
+    };
 
     async editar (req, res) {
         try {
             await Jugador.findByIdAndUpdate(req.params.id, req.body)
             res.status(201).json({
-                msg: 'la persona ' + req.params.id + ' fue actualizado'
+                msg: 'La persona ' + req.params.id + ' fue actualizado'
             })
         } catch (error) {
             res.status(500).json(error)
-        }
-        
-    }
+        }  
+    };
 
     async eliminar (req, res) {
         await Jugador.findByIdAndDelete(req.params.id)
         res.status(204).json({
-            msg: 'la persona ' + req.params.id + ' fue eliminada'
+            msg: 'La persona ' + req.params.id + ' fue eliminada'
         })  
-    }
+    };
 
-}
+};
 
-module.exports = new ApiController
+module.exports = new ApiController;
 
 
 

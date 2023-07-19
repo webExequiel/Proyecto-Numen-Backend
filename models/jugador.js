@@ -14,6 +14,7 @@ const schema = new Schema ({
     nacionalidad:{
         type:String,
         required: true
+
     },
     club:{
         type:String,
@@ -30,9 +31,9 @@ const schema = new Schema ({
         type:String,
         required: true,
 
-    }
+    },
 
-})
+});
 
 const Jugador = model('Jugador', schema);
-module.exports = {Jugador}
+module.exports = {Jugador};

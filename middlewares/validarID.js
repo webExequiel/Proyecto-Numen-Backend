@@ -2,7 +2,7 @@ const {Jugador} = require('../models/jugador');
 const validarID = async (req, res, next) => {
     try {
         const persona = await Jugador.findById(req.params.id);
-        console.log('hola estoy en el middleware')
+        console.log('Hola estoy en el middleware')
         if (persona !== null) {
             next();
         } else {
@@ -14,6 +14,6 @@ const validarID = async (req, res, next) => {
         res.status(500).json(error)
     }
 
-}
+};
 
-module.exports = {validarID}
+module.exports = {validarID};
